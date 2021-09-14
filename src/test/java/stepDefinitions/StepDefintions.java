@@ -75,6 +75,7 @@ public class StepDefintions {
 	public void api_call_is_success_with_status_code(Integer int1) {
 		assertNotEquals(js.getList("$").size(), 0);
 		assertEquals(response.getStatusCode(),200);
+	    assertTrue(response.time() < Long.parseLong("1000"));
 	}
 	
 
